@@ -2,6 +2,5 @@ pandas
 numpy
 matplotlib
 streamlit
-streamlit_option_menu
 warnings
 sklearn
