@@ -2,9 +2,4 @@ pandas
 numpy
 matplotlib
 streamlit
-<<<<<<< HEAD
 streamlit_option_menu
-=======
-warnings
-scikit-learn
->>>>>>> 13b9985711711285737794975261549abfd1dc13
