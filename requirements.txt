@@ -2,5 +2,4 @@ pandas
 numpy
 matplotlib
 streamlit
-warnings
-sklearn
+streamlit_option_menu

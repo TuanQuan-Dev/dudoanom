@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run Cuong.py
+web: sh setup.sh && streamlit run GUI.py
