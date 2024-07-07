@@ -12,11 +12,11 @@ def PlotPolly(model, independent_variable, dependent_variabble, Name):
     plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-')
     plt.plot()
     plt.title("Tính om theo nhiệt độ")
-    #ax = plt.gca()
-    #ax.set_facecolor((0.898, 0.898, 0.898))
+    ax = plt.gca()
+    ax.set_facecolor((0.898, 0.898, 0.898))
+    ax.yaxis.set(ticks=np.arange(0, 34, 2), label_text='Nhiet do')
     #fig = plt.gcf()
-    plt.xlabel(Name)
-    plt.ylabel("Nhiet do")
+    plt.xlabel(Name)    
 
     st.pyplot(plt)
 #####################################################
