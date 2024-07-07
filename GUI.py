@@ -1,14 +1,25 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from sklearn.linear_model import LinearRegression
-from sklearn.linear_model import LogisticRegression
-
 import streamlit as st
 
 import warnings
 warnings.filterwarnings("ignore")
 
-#streamlit run Cuong.py
+def PlotPolly(model, independent_variable, dependent_variabble, Name):
+    x_new = np.linspace(0, 65, 100)
+    y_new = model(x_new)
+
+    plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-')
+    plt.plot()
+    plt.title("Tính om theo nhiệt độ")
+    #ax = plt.gca()
+    #ax.set_facecolor((0.898, 0.898, 0.898))
+    #fig = plt.gcf()
+    plt.xlabel(Name)
+    plt.ylabel('Price of Cars')
+
+    plt.show()
+    plt.close()
 
 # Dữ liệu 
 
@@ -20,18 +31,13 @@ st.header("Dữ liệu gốc:")
 
 X = np.array([0, 10, 20, 30, 40, 50, 60]) 
 y = np.array([32, 20, 12.5, 8, 4.8, 3, 2])
- 
-plt.plot(X, y) 
-st.pyplot(plt)
 
-X = X.reshape(-1, 1)
-y = y.reshape(-1, 1)
+f = np.polyfit(x, y, 4)
+p = np.poly1d(f)
+PlotPolly(p, x, y, "om")
 
-model = LinearRegression()
-model.fit(X, y)
+#text = st.number_input("Vui lòng nhập nhiệt độ:")
+#X_test = np.array([text])
+#y = model.predict(X_test.reshape(-1, 1))[0][0]
 
-text = st.number_input("Vui lòng nhập nhiệt độ:")
-X_test = np.array([text])
-y = model.predict(X_test.reshape(-1, 1))[0][0]
-
-st.write(f"Kết quả: <b>{y}</b>", unsafe_allow_html=True)
+#st.write(f"Kết quả: <b>{y}</b>", unsafe_allow_html=True)
