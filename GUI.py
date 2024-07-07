@@ -32,9 +32,9 @@ st.header("Dữ liệu gốc:")
 X = np.array([0, 10, 20, 30, 40, 50, 60]) 
 y = np.array([32, 20, 12.5, 8, 4.8, 3, 2])
 
-f = np.polyfit(x, y, 4)
+f = np.polyfit(X, y, 4)
 p = np.poly1d(f)
-PlotPolly(p, x, y, "om")
+PlotPolly(p, X, y, "om")
 
 #text = st.number_input("Vui lòng nhập nhiệt độ:")
 #X_test = np.array([text])
