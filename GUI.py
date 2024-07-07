@@ -18,8 +18,8 @@ def PlotPolly(model, independent_variable, dependent_variabble, Name):
     plt.xlabel(Name)
     plt.ylabel('Price of Cars')
 
-    plt.show()
-    plt.close()
+    st.pyplot(plt)
+#####################################################
 
 # Dữ liệu 
 
